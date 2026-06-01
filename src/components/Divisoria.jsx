@@ -11,7 +11,10 @@ const estilo = {
   },
 }
 
-export default function Divisoria({children})  {
+export default function Divisoria(
+  {children}/*Argumento especial 
+  todo o conjunto de assuntos que está dentro da abertura e fechamento desse componente */ 
+)  {
   return(<div style={estilo.div}>
     {children}
   </div>)
