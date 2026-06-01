@@ -10,18 +10,22 @@ argumento largura = 30
 */
 import root from '../styles/main';
 
-const estilo = {
-  div: {
-    width:90wh
-    display:flex
-  },
+export default function AtvDivisoria ({largura}){
+    const style = {
+    inicial: {
+    width: "90vw"
+    },
+    esquerda: {
+    width: toString(largura) + '%'
+    },
+    direita: {
+    width: toString(100-largura) + '%'
+    },
 }
-
-export default function AtvDivisoria({largura})  {
-  return(<div style={estilo.div}>
-    <div largura="widht:30wh"></div>
-    <div largura="widht:70wh"></div>
-  </div>)
-}
-    
+    return(
+        <div style={style.inicial}>
+        <div style={style.esquerda}> </div>
+        <div style={style.direita}> </div>
+        </div>
+    )
 }
