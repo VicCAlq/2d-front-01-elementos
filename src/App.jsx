@@ -3,9 +3,14 @@ import './App.css'
 import Divisoria from './components/Divisoria';
 import Paragrafo from './components/Paragrafo';
 import Botao from './components/Botao';
+import AtvBotaoAcaoExterna from './components/AtvBotaoAcaoExterna';
 
 function App() {
   const [count, setCount] = useState(0)
+
+  function mostrarMensagem() {
+    alert("Botão clicado")
+  }
 
   return (
     <>
@@ -13,6 +18,7 @@ function App() {
         <Divisoria>
           <Paragrafo conteudo="Sou um exemplo"/>
           <Botao/>
+          <AtvBotaoAcaoExterna comando={mostrarMensagem}/>
         </Divisoria>
       </section>
     </>
