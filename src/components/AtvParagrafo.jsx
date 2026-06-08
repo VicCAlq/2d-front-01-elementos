@@ -5,22 +5,22 @@ Crie e exporte por padrão um componente chamado "AtvParagrafo" que recebe dois 
 */
 import root from '../styles/main';
 
-export default function AtvDivisoria ({largura}){
-    const style = {
-    inicial: {
-    width: "90vw"
+const estilo = {
+    titulo: {
+        fontSize: "32px"
     },
-    esquerda: {
-    width: toString(largura) + '%'
-    },
-    direita: {
-    width: toString(100-largura) + '%'
+    conteudo: {
+        fontSize: "16px"
     },
 }
-    return(
-        <div style={style.inicial}>
-        <div style={style.esquerda}> </div>
-        <div style={style.direita}> </div>
-        </div>
-    )
-}
+
+export default function AtvParagrafo ({titulo, conteudo}){
+return (
+    <div>
+        <h1 style={estilo.titulo}>{titulo}</h1>
+        <p style={estilo.conteudo}>{conteudo}</p>
+    </div>
+
+
+
+)}
