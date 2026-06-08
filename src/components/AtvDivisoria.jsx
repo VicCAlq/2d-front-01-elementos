@@ -11,29 +11,34 @@ argumento largura = 30
 
 import root from '../styles/main';
 
-const estilo = {
-  div: {
-    display: "flex",
-    flexDirection: "row",
-    borderRadius: "10px",
-    padding: root.spacings.paddingG,
-    backgroundColor: root.colors.foreground,
-    gap: root.spacings.gap,
-    width: "90vw",
-
-    divEsquerda:{
-        width: {largura},
-    },
-
-    divDireita:{
-        width:"70%",
-    }
-    },
-}
-
 export default function AtvDivisoria({largura})  {
-  return(<div style={estilo.div}>{largura}
-<div style={estilo.divEsquerda}>esquerda</div>
-<div style={estilo.divDireita}>direita</div>
+  
+  const estilo = {
+    div: {
+      display: "flex",
+      flexDirection: "row",
+      borderRadius: "10px",
+      padding: root.spacings.paddingG,
+      backgroundColor: root.colors.foreground,
+      gap: root.spacings.gap,
+      width: "90vw",
+      height: "100px",
+    },
+    divEsquerda:{
+        width: `${largura}%`,
+        height: "100px",
+        backgroundColor: "orange",
+    },
+    divDireita:{
+        width: `${100-largura}%`,
+        height: "100px",
+        backgroundColor: "purple",
+
+    }
+  }
+
+  return(<div style={estilo.div}>
+    <div style={estilo.divEsquerda}>esquerda</div>
+    <div style={estilo.divDireita}>direita</div>
   </div>)
 }
