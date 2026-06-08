@@ -8,24 +8,31 @@ argumento largura = 30
 <div> esquerda = 30% da largura da div inicial (30% de 90% da largura da tela)
 <div> direita = 70% da largura da div inicial (70% de 90% da largura da  tela)
 */
-import root from '../styles/main';
 
-export default function AtvDivisoria ({largura}){
-    const style = {
-     d: {
-        width: toString(100-largura) + '%'
-     },
-    i: {
-        width: "90vw"
-    },
-    e: {
-        width: toString(largura) + '%'
-    },
+const style={
+    inicio:{
+        width: "90vw",
+        display: "flex",
+        height: "100px",
+        backgroundColor: "gray",
+    }
 }
-    return(
-        <div style={style.i}>
-        <div style={style.e}> </div>
-        <div style={style.d}> </div>
-        </div>
-    )
+function AtvDivisoria({ largura }) {
+  return (
+    <div style={style.inicio}>
+      <div
+        style={{width: `${largura}%`, height: "100px",
+        backgroundColor: "green",}}>
+        Esquerda
+      </div>
+
+      <div
+        style={{width: `${100 - largura}%`,height: "100px",
+        backgroundColor: "teal",}}>
+        Direita
+      </div>
+    </div>
+  );
 }
+
+export default AtvDivisoria;
