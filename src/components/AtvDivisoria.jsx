@@ -8,3 +8,14 @@ argumento largura = 30
 <div> esquerda = 30% da largura da div inicial (30% de 90% da largura da tela)
 <div> direita = 70% da largura da div inicial (70% de 90% da largura da  tela)
 */
+
+import root from '../styles/main';
+
+const estilo = {
+ titulo:
+
+ { fontSize: "32px" },
+ 
+ conteudo:
+
+ { fontSize: "16px" }, }
