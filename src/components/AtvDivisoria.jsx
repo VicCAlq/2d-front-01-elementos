@@ -11,7 +11,7 @@ argumento largura = 30
 
 export default function AtvDivisoria({largura})  {
   return(<div style={{width: '90vw', display: 'flex'}}>
-    <div style={{width: ${largura}%}}></div>
-    <div style={{width: ${100-largura}%}}></div>
+    <div style={{width: '${largura}%'}}></div>
+    <div style={{width: '${100-largura}%'}}></div>
   </div>)
 }
