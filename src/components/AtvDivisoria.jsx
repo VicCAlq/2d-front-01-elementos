@@ -10,21 +10,22 @@ argumento largura = 30
 */
 import root from '../styles/main';
 
-export default function AtvDivisoria({largura}){
-    const estilo={
-        DivGrande:{
-            width:"90vw",
-        },
-        DivEsquerda:{
-            width:ToString(largura)+"%"
-        },
-        DivDireita
-        
-    }
-
+export default function AtvDivisoria ({largura}){
+    const style = {
+     d: {
+        width: toString(100-largura) + '%'
+     },
+    i: {
+        width: "90vw"
+    },
+    e: {
+        width: toString(largura) + '%'
+    },
+}
     return(
-        <div style={}>
-
+        <div style={style.i}>
+        <div style={style.e}> </div>
+        <div style={style.d}> </div>
         </div>
     )
 }
