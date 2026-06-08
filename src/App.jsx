@@ -12,9 +12,9 @@ function App() {
   return (
     <>
       <section id="center">
-        <AtvBotaoAcaoExterna/>
-        <Divisoria>
+         <Divisoria>
           <AtvParagrafo/>
+           <AtvBotaoAcaoExterna/>
           <AtvBotaoAcaoInterna/>
           <Paragrafo conteudo="Sou um exemplo"/>
         </Divisoria>
