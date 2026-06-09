@@ -8,3 +8,31 @@ argumento largura = 30
 <div> esquerda = 30% da largura da div inicial (30% de 90% da largura da tela)
 <div> direita = 70% da largura da div inicial (70% de 90% da largura da  tela)
 */
+
+function AtvDivisoria({ largura }) {
+  const larguraEsquerda = largura;
+  const larguraDireita = 100 - largura;
+
+  const estiloContainerInterno = {
+    display: 'flex',
+    width: '100%'
+  };
+
+  return (
+    <div style={{ width: '90vw' }}>
+      <div style={estiloContainerInterno}>
+        {}
+        <div style={{ width: `${larguraEsquerda}%` }}>
+          {}
+        </div>
+
+        {}
+        <div style={{ width: `${larguraDireita}%` }}>
+          {}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default AtvDivisoria;
