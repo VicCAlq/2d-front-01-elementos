@@ -11,11 +11,11 @@ argumento largura = 30
 
 import root from '../styles/main';
 
-const estilo = {
- titulo:
-
- { fontSize: "32px" },
- 
- conteudo:
-
- { fontSize: "16px" }, }
+export default function AtvDivisoria({ largura }) {
+  return (
+    <div style={{ width: "90vw", display: "flex" }}>
+      <div style={{ width: `${largura}%` }} />
+      <div style={{ width: `${100 - largura}%` }} />
+    </div>
+  );
+}
