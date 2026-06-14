@@ -11,6 +11,8 @@ argumento largura = 30
 
 import root from '../styles/main';
 
+
+
 export default function AtvDivisoria({ largura }) {
   return (
     <div style={{ width: "90vw", display: "flex" }}>
