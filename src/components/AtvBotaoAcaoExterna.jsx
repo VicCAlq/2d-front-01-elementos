@@ -1,4 +1,3 @@
-import root from '../styles/main';
 
 const estilo = {
   botao: {
@@ -11,15 +10,9 @@ const estilo = {
     fontSize: "16px",
   }
 }
-export function Comando ({}) {
-return(
-  <div>
-  <button onClick={() => alert("Que aura")}></button>
-  </div>
-)
-}
 
-export default function AtvBotaoAcaoExterna({Comando})  {
+
+export default function AtvBotaoAcaoExterna({})  {
   return(
     (<div>
     <p>Clique Abaixo</p>
