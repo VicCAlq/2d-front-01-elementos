@@ -9,3 +9,19 @@ argumento "conteudo". O <h1> de "titulo" deve ter o tamanho de 32px, e o
 <p> de "conteudo" deve ter o tamanho de 16px. O texto do "titulo" deve ficar 
 acima do texto do "conteudo".
 */
+
+import root from 'AtvParagrafo';
+
+const estilo = {
+  texto: {
+    color: root.colors.texto,
+    fontSize: "32px",
+  }
+}
+
+export default function Paragrafo({conteudo})  {
+  return(
+    <p style={estilo.texto}>{conteudo} 16px</p>
+  )
+}
+
